@@ -1,3 +1,6 @@
+
+/*============= GERAL =============*/
+
 * {
 	padding: 0;
 	margin: 0;
@@ -19,115 +22,522 @@ h1, h2, h3 {
     font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
     font-weight: 700;
 }
+
+/*============= Cabeçalho =============*/
+
 header {
 	display: flex;
+	width: 100%;
 	flex-direction: column;
 	align-items: center;
-	background-color: #2c3e50;
-	
+	background-color: #f1f1f1;
+	padding-top: 1px;
+	box-shadow:  0px 5px 5px rgba(0,0,0,0.5); 
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 3;
+
 }
 
-header div {
-	width: 100%;
-	align-items: center;
-	text-align: right;
-}
-
-header div div {
-	display: inline-block;
-	width: 40%;
-	align-items: center;
-	text-align: right;
+header > div {
+	padding: 5px;	
 }
 
 header div > a {
 	font-family: Pacifico, serif;
 	font-size: 25px;
 	font-weight: 700;
-	color: #f1f1f1;
-}
-
-header div i.menu-drop {
-	display: block-inline;
-	margin-left: 5px;
-	margin-right: 15px;
-	font-size: 23px;
-	color: #f1f1f1;
+	color: #2c3e50;
 }
 
 header nav {
 	width: 100%;
+	height: auto;
+	overflow: auto;
 }
 
-header nav ul {
+/*============= Cabeçalho --> MENU =============*/
+
+nav ul.container-menu {
 	list-style: none;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 100%; 
-}
-
-header nav ul li {
-	width: 95%;
-	border-bottom: 0.2px solid #f2f2f2;
-	
-}
-
-header nav ul li a {
-	color: #f1f1f1;
-	display: block;
 	width: 100%;
+	height: 262px;
+	margin-top: -100%;
+	transition: 0.5s ease;
+	position: relative;
+	z-index: 3;
+}
+
+nav ul.container-menu li {
+	width: 95%;
+}
+
+nav ul.container-menu li a {
+	color: #2c3e50;
+	display: block;
+	width: 95%;
 	padding: 12px 0;
 	margin-left: 10px;
-}
-
-
-/*======== Slide show ======*/
-
-
-section {
-	width: 100%;
-}
-
-#container-slide {
-	width: 100%;
-	height:270px;
-	position: relative;
-	overflow: hidden;
+	font-weight: bold;
 }
 
 
 
-img.foto {
-	width: 100%;
-	height: 270px;
+/*============= Botao Pesquisa ============*/
+
+div.container-busca {
 	position: absolute;
-	top: 0;
-	opacity: 0;
-	animation-name: animacao;
-	animation-duration: 20s;
-	animation-iteration-count: infinite;
-}
-
-@keyframes animacao{
-	35%{
-		opacity: 1;
-		transform:scale(1.1,1.1);
-	}
-
-	50%{
-		opacity: 0;
-	}
-}
-
-.foto:nth-child(1){
+	top: 55px;
+	left: 0px;
+	width: 200px;
+	height: auto;
+	background-color: #f1f1f1;
+	padding: 10px 5px 10px 15px;
+	border-radius: 0px 0px 3px;
+	margin-left: -100%;
+	transition: linear 0.5s;
 	
 }
 
-.foto:nth-child(2){
-	animation-delay: 7s;
+div.container-busca input {
+	width: 170px;
+	height: 40px;
+	padding-left: 5px;
+	border: 1px solid #9f9f9f;
+	border-radius: 3px;
+	color: #5d5d5d;
 }
 
-.foto:nth-child(3){
-	animation-delay: 14s;
+#btn-busca {
+	display: none;
+}
+
+i.icon-busca {
+	position: absolute;
+	top: 15px;
+	left: 16px;
+	color: #2c3e50;
+	font-size: 27px;
+	height: 100%;
+}
+
+#btn-busca:checked ~ .container-busca{
+	margin-left: 0;
+}
+
+/*========== Cabeçalho --> MENU --> Efeito Dropdown ==========*/
+
+#btn-menu {
+	display: none;
+}
+
+span.icon-menu {
+	position: absolute;
+	top: 0px;
+	right: 12px;
+	color: #2c3e50;
+	font-size: 27px;
+	height: 100%;
+	padding-top: 9px;
+	font-weight: 900;
+
+}
+
+#btn-menu:checked ~ .container-menu {
+	margin-top: 0;
+}
+
+/*============= Slide show ============*/
+
+#container-slide {
+	display: block;
+	width: 100%;
+	height:280px;
+	position: relative;
+	margin-top: 55px;
+
+}
+
+img.img-slide {
+	width: 100%;
+	height: 250px;
+}
+
+/*============= Slide show --> ANIMAÇÃO ============*/
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+	width: 100%;
+	height: 250px;
+	position: relative;
+	margin: auto;
+}
+
+/* Caption text */
+.text {
+	color: #f2f2f2;
+	font-size: 15px;
+	padding: 8px 12px;
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	text-align: center;
+	background: rgba(1,1,1,.6);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+	height: 11px;
+	width: 11px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+
+.active {
+	background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+}
+
+@keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+	.text {font-size: 11px}
+}
+
+/*============= ARTIGOS ============*/
+
+#public {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+
+}
+
+.container-artigos {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 450px;
+	height: auto;
+	margin: 0 auto;
+	margin-top: 10px;
+	padding: 15px 5px;
+	padding-bottom: 35px;
+	border-bottom: #9d9d9d solid .5px;
+	
+}
+
+.container-artigos h2{
+	text-align: center;
+	padding: 10px;
+	margin-bottom: 15px;
+}
+
+.itens-artigos {
+	display: flex;
+	width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+}
+
+.itens-artigos img {
+	width: 145px;
+	height: 100px;
+}
+.texto-itens {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100px;
+	padding-left: 8px;
+	padding-bottom: 3px;
+}
+
+.itens-artigos a {
+	display: block;
+	font-size: 17px;
+	color: #5d5d5d;
+	width: 100%;
+	height: 80%;
+}
+
+.marcador-artigos {
+	display: block;
+	width:100%;
+	height: auto;
+	font-size: 10px;
+	color: #5d5d5d;
+}
+
+.categoria {
+	display: inline-block;
+	background-color: #6FC5FC;
+	padding: 0 3px;
+	border-radius: 1px;
+	width: 50%;
+}
+
+.data-publicacao {
+	display: inline-block;
+	width: 40%;
+	text-align: right;
+}
+
+/*============= VIDEOS ============*/
+
+.container-videos {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 95%;
+	height: auto;
+	margin-top: 10px;
+	padding: 15px 0;
+	padding-bottom: 35px;
+	
+}
+
+.container-videos h2{
+	text-align: center;
+	padding: 10px;
+	margin-bottom: 15px;
+}
+.itens-videos {
+	display: flex;
+	flex-direction: column;
+	max-width: 400px;
+	height: auto;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+.itens-videos iframe {
+	width: 100%;
+	height: auto;
+}
+
+/*.itens-videos a {
+	font-size: 17px;
+	padding: 5px 0px;
+	text-align: center;
+	color: #5d5d5d;
+}*/
+
+/*============= RODAPE ============*/
+
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100px;
+	background-color: #2c3e50;
+	color: #f1f1f1;
+	text-align: center;
+	font-size: 14px;
+}
+
+footer a {
+	color: #9d9d9d;
+}
+/*========================================== LINHAS DE PESQUISA - INICIO ===============================================*/
+
+
+.container-conteudo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 800px;
+	height: auto;
+	margin: 0 auto;
+	background-color: #D7D5D5;
+	margin-top: 55px;
+}
+
+
+/*========================================== LINHAS DE PESQUISA - FIM ===============================================*/
+
+@media screen and (min-width: 430px) {
+	
+	#container-slide {
+		max-width: 500px;
+		height: 330px;
+		position: relative;
+		margin: 0 auto;
+		margin-top: 75px;
+
+	}
+
+	img.img-slide {
+		height: 330px;
+	}
+
+	.slideshow-container {
+		height: 330px;
+	}
+	
+
+}
+
+
+@media screen and (min-width: 700px ) {
+	
+	header {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	header nav {
+		display: flex;
+		justify-content: flex-end;
+		max-width: 500px;
+		height: 55px;
+		margin-right: 40px;
+	}
+
+	header > div {
+	margin-left: 40px;	
+}
+
+	
+	i.icon-busca {
+		display: none;
+	}
+
+	nav ul.container-menu {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-around;
+		width: 100%;
+		margin-top: 0;
+		height: 55px;
+		z-index: 3;
+	}
+
+	nav ul.container-menu li {
+		width: auto;
+		text-align: center;
+		height: 55px;
+		vertical-align: middle;
+	}
+
+	nav ul.container-menu li a {
+		color: #2c3e50;
+		padding: 0 5px;
+		padding-top: 15px;
+		margin-left: 0px;
+		width: 100%;
+		height: 100%;
+		font-size: 15px;
+		transition: linear 0.5;
+	}
+
+	nav ul.container-menu li a:hover {
+		border-bottom: 2px solid #2c3e50;
+	}
+
+	span.icon-menu {
+			display: none;
+		}
+	
+	#container-slide {
+		max-width: 800px;
+		height: 430px;
+		position: relative;
+		margin: 0 auto;
+		margin-top: 75px;
+
+	}
+
+	img.img-slide {
+		height: 430px;
+	}
+
+	.slideshow-container {
+		height: 430px;
+	}
+	
+	#public {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 800px;
+		margin: 60px auto;
+	}
+	
+	.container-artigos {
+		max-width: 350px;	
+		border: none;
+		margin: 0;
+		padding: 0px 0px;
+	}
+
+	.itens-artigos:hover {
+		box-shadow:  0px 3px 5px rgba(0,0,0,0.5);
+	}
+
+	.itens-artigos a:hover {
+		transition: color ease 0.5s;
+		color: #1D5F8A;
+		
+	}
+
+
+	.container-videos {
+		max-width: 300px;
+		height: auto;
+		padding: 0px 0px;
+		margin: 0px;
+	}
+
+	.itens-videos {
+		display: flex;
+		flex-direction: column;
+		max-width: 300px;
+		height: auto;
+		margin: 0 0;
+		margin-bottom: 20px;
+	
+	}
+	
+
 }

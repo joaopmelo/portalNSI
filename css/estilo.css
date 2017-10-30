@@ -15,6 +15,7 @@ body {
 	font-family: "Open Sans", Helvetica, Arial, sans-serif;
 	color: #4d4d4d;
 	width: 100%;
+
 }
 
 h1, h2, h3 {
@@ -32,7 +33,7 @@ header {
 	align-items: center;
 	background-color: #f1f1f1;
 	padding-top: 1px;
-	box-shadow:  0px 5px 5px rgba(0,0,0,0.5); 
+	box-shadow:  0px 2px 5px rgba(0,0,0,0.5); 
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -41,7 +42,7 @@ header {
 }
 
 header > div {
-	padding: 5px;	
+	padding: 5px;
 }
 
 header div > a {
@@ -272,6 +273,7 @@ img.img-slide {
 	width: 100%;
 	height: auto;
 	margin-bottom: 20px;
+	box-shadow:  0px 1px 3px rgba(0,0,0,0.5);
 }
 
 .itens-artigos img {
@@ -385,12 +387,102 @@ footer a {
 	max-width: 800px;
 	height: auto;
 	margin: 0 auto;
-	background-color: #D7D5D5;
 	margin-top: 55px;
 }
 
 
-/*========================================== LINHAS DE PESQUISA - FIM ===============================================*/
+
+
+/*======================= INTEGRANTES - MOBILE - INICIO ==========================================*/
+
+
+.container-integrantes {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: auto;
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+
+.container-integrantes h1 {
+	display: block;
+	width: 95%;
+	text-align: left;
+	padding: 10px 5px;
+	margin-bottom: 60px;
+	border-bottom: 1px solid #D3D3D3;
+}
+
+.container-integrantes div {
+	display: flex;
+	flex-direction: row;
+	width: 95%;
+	height: auto;
+	margin-bottom: 50px;
+	padding: 0px 5px;
+}
+
+.container-integrantes div img {
+	display: inline-block;
+	width: 70px;
+	height: 70px;
+	max-width: 120px;
+	max-height: 120px;
+	border-radius: 50%;
+}
+
+.container-integrantes div p {
+	display: flex;
+	flex-direction: column;
+	padding-left: 15px;
+	width: 100%;
+	height: auto;
+}
+
+/*------------- CORES -------------------*/
+
+.color-front{
+	background-color: #E74856;
+}
+
+.color-backand {
+	background-color: #607D8B;
+}
+
+.color-android {
+	background-color: #00CC6A;
+}
+
+.container-integrantes .linhap {
+	display: block;
+	width: 100%;
+	height: auto;
+	font-size: 12px;
+	text-align: center;
+	margin-bottom: 25px;
+	font-weight: bold;
+	color: #fff;
+	border-radius: 2px;
+}
+
+.container-integrantes .titulo {
+	display: block;
+	width: 100%;
+	font-weight: 600;
+	font-size: 14px;
+	margin-left: 5px;
+}
+
+.container-integrantes .titulo span {
+	color: #37ABE7;
+	font-weight: 600;
+	font-family: "Roboto";
+}
+
+/*=========================== INTEGRANTES - MOBILE - FIM ===========================================*/
+
 
 @media screen and (min-width: 430px) {
 	
@@ -422,6 +514,7 @@ footer a {
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
+		padding: 0 40px;
 	}
 
 	header nav {
@@ -429,11 +522,11 @@ footer a {
 		justify-content: flex-end;
 		max-width: 500px;
 		height: 55px;
-		margin-right: 40px;
+		margin-right: 0px;
 	}
 
 	header > div {
-	margin-left: 40px;	
+	margin-left: 0px;	
 }
 
 	
@@ -501,7 +594,8 @@ footer a {
 		align-items: center;
 		justify-content: space-between;
 		max-width: 800px;
-		margin: 60px auto;
+		margin: 100px auto;
+
 	}
 	
 	.container-artigos {
@@ -511,9 +605,6 @@ footer a {
 		padding: 0px 0px;
 	}
 
-	.itens-artigos:hover {
-		box-shadow:  0px 3px 5px rgba(0,0,0,0.5);
-	}
 
 	.itens-artigos a:hover {
 		transition: color ease 0.5s;
@@ -539,5 +630,39 @@ footer a {
 	
 	}
 	
+/*========== INTEGRANTES - DESKTOP - INICIO ================*/
+
+	.container-integrantes div {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 75%;
+			margin-bottom: 90px;
+		}
+
+	.container-integrantes .linhap {
+			font-size: 15px;
+			margin-bottom: 35px;
+			border-radius: 0;
+		}
+
+	.container-integrantes .titulo {
+			font-size: 16px;
+			margin-left: 15px;
+			
+		}
+
+	.container-integrantes .titulo span {
+		font-size: 16px;
+		margin-left: 10px;
+		font-weight: 600;
+	}
+
+	.container-integrantes div img {
+		display: block;
+		width: 100px;
+		height: 100px;
+		margin-bottom: 30px;
+	}
 
 }

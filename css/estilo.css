@@ -1,5 +1,4 @@
-
-/*============= GERAL =============*/
+/* --- ============  GERAL  ============= ---*/
 
 * {
 	padding: 0;
@@ -24,7 +23,7 @@ h1, h2, h3 {
     font-weight: 700;
 }
 
-/*============= Cabeçalho =============*/
+/* --- ============  CABEÇALHO - MOBILE  ============= ---*/
 
 header {
 	display: flex;
@@ -50,6 +49,7 @@ header div > a {
 	font-size: 25px;
 	font-weight: 700;
 	color: #2c3e50;
+	text-shadow: 1px 1px 1px #7d7d7d;
 }
 
 header nav {
@@ -88,7 +88,7 @@ nav ul.container-menu li a {
 
 
 
-/*============= Botao Pesquisa ============*/
+/* --- ============  BOTAO DE PESQUISA - MOBILE  ============= ---*/
 
 div.container-busca {
 	position: absolute;
@@ -152,7 +152,7 @@ span.icon-menu {
 	margin-top: 0;
 }
 
-/*============= Slide show ============*/
+/* --- ============  SLIDE SHOW - MOBILE  ============= ---*/
 
 #container-slide {
 	display: block;
@@ -168,7 +168,7 @@ img.img-slide {
 	height: 250px;
 }
 
-/*============= Slide show --> ANIMAÇÃO ============*/
+
 .mySlides {display:none}
 
 /* Slideshow container */
@@ -238,34 +238,39 @@ img.img-slide {
 	.text {font-size: 11px}
 }
 
-/*============= ARTIGOS ============*/
+/* --- ============  ARTIGOS - MOBILE  ============= ---*/
 
 #public {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	width: 100%;
+	margin-top: 20px;
+}
 
+#public h2 {
+	color: #4d4d4d;
+	display: block;
+	text-align: center;
+	width: 65%;
+	padding: 10px;
+	margin-bottom: 15px;
+	border-bottom: #9d9d9d solid .5px;
+	
 }
 
 .container-artigos {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	max-width: 450px;
+	width: 100%;
 	height: auto;
 	margin: 0 auto;
 	margin-top: 10px;
 	padding: 15px 5px;
 	padding-bottom: 35px;
-	border-bottom: #9d9d9d solid .5px;
 	
-}
-
-.container-artigos h2{
-	text-align: center;
-	padding: 10px;
-	margin-bottom: 15px;
+	
 }
 
 .itens-artigos {
@@ -280,6 +285,7 @@ img.img-slide {
 	width: 145px;
 	height: 100px;
 }
+
 .texto-itens {
 	display: flex;
 	flex-direction: column;
@@ -319,7 +325,22 @@ img.img-slide {
 	text-align: right;
 }
 
-/*============= VIDEOS ============*/
+/*----------- CORES CATEGORIA ------------*/
+
+.color-front{
+	background-color: #E74856;
+}
+
+.color-backand {
+	background-color: #607D8B;
+}
+
+.color-android {
+	background-color: #00CC6A;
+}
+
+
+/* --- ============  VIDEOS - MOBILE  ============= ---*/
 
 .container-videos {
 	display: flex;
@@ -333,11 +354,6 @@ img.img-slide {
 	
 }
 
-.container-videos h2{
-	text-align: center;
-	padding: 10px;
-	margin-bottom: 15px;
-}
 .itens-videos {
 	display: flex;
 	flex-direction: column;
@@ -359,7 +375,7 @@ img.img-slide {
 	color: #5d5d5d;
 }*/
 
-/*============= RODAPE ============*/
+/* --- ============  RODAPEH - MOBILE  ============= ---*/
 
 footer {
 	display: flex;
@@ -377,7 +393,7 @@ footer {
 footer a {
 	color: #9d9d9d;
 }
-/*========================================== LINHAS DE PESQUISA - INICIO ===============================================*/
+/*================== LINHAS DE PESQUISA - INICIO ==================*/
 
 
 .container-conteudo {
@@ -393,7 +409,7 @@ footer a {
 
 
 
-/*======================= INTEGRANTES - MOBILE - INICIO ==========================================*/
+/*================== INTEGRANTES - MOBILE - INICIO ==================*/
 
 
 .container-integrantes {
@@ -441,19 +457,6 @@ footer a {
 	height: auto;
 }
 
-/*------------- CORES -------------------*/
-
-.color-front{
-	background-color: #E74856;
-}
-
-.color-backand {
-	background-color: #607D8B;
-}
-
-.color-android {
-	background-color: #00CC6A;
-}
 
 .container-integrantes .linhap {
 	display: block;
@@ -481,7 +484,7 @@ footer a {
 	font-family: "Roboto";
 }
 
-/*=========================== INTEGRANTES - MOBILE - FIM ===========================================*/
+/*================== INTEGRANTES - MOBILE - FIM ==================*/
 
 
 @media screen and (min-width: 430px) {
@@ -508,7 +511,8 @@ footer a {
 
 
 @media screen and (min-width: 700px ) {
-	
+
+/* --- ============  CABEÇALHO - DESKTOP  ============= ---*/
 	header {
 		display: flex;
 		flex-direction: row;
@@ -526,13 +530,14 @@ footer a {
 	}
 
 	header > div {
-	margin-left: 0px;	
+		margin-left: 0px;	
 }
 
 	
 	i.icon-busca {
 		display: none;
 	}
+/* --- ============  MENU NAVEGAÇÂO - DESKTOP  ============= ---*/
 
 	nav ul.container-menu {
 		display: flex;
@@ -571,6 +576,8 @@ footer a {
 			display: none;
 		}
 	
+/* --- ============  SLIDE SHOW - DESKTOP  ============= ---*/
+
 	#container-slide {
 		max-width: 800px;
 		height: 430px;
@@ -588,29 +595,73 @@ footer a {
 		height: 430px;
 	}
 	
+	
+/* --- ============  ARTIGOS - DESKTOP  ============= ---*/
+	
 	#public {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-		max-width: 800px;
 		margin: 100px auto;
-
 	}
 	
-	.container-artigos {
-		max-width: 350px;	
-		border: none;
-		margin: 0;
-		padding: 0px 0px;
+	#public h2 {
+		width: 25%;
 	}
 
+	.container-artigos {
+		flex-direction: row;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		max-width: 900px;
+		height: auto;	
+		margin: 5px auto;
+		padding: 45px 0px;
+	}
 
 	.itens-artigos a:hover {
 		transition: color ease 0.5s;
 		color: #1D5F8A;
-		
 	}
+	.itens-artigos a {
+		padding: 5px 0;
+	}
+	
+	.itens-artigos {
+		flex-direction: column;
+		width: 251px;
+		min-height: 281px;
+		margin-left: 15px;
+	}
+	
+	.itens-artigos img {
+		width: 100%;
+		height: 184px;
+	}
+
+	.marcador-artigos {
+		display: flex;
+		flex-direction: row;
+		width:100%;
+		height: auto;
+		font-size: 10px;
+		color: #5d5d5d;
+	}
+
+	.categoria {
+		display: inline-block;
+		background-color: #6FC5FC;
+		padding: 0 7px;
+		border-radius: 1px;
+		width: 50%;
+	}
+
+	.data-publicacao {
+		display: inline-block;
+		width: 100%;
+		padding-right:  15px;
+		text-align: right;
+	}
+
+
+/* --- ============  VIDEOS - DESKTOP  ============= ---*/
 
 
 	.container-videos {

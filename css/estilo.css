@@ -1,3 +1,6 @@
+
+/*-------  Sugestao de cor: #273238;  ---------*/
+
 /* --- ============  GERAL  ============= ---*/
 
 * {
@@ -14,13 +17,13 @@ body {
 	font-family: "Open Sans", Helvetica, Arial, sans-serif;
 	color: #4d4d4d;
 	width: 100%;
-
+	background-color: #F5F5F5;
 }
 
 h1, h2, h3 {
     margin: 0;
-    font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
-    font-weight: 700;
+    font-family: "Dosis", Helvetica, Arial, sans-serif;
+    font-weight: 600;
 }
 
 /* --- ============  CABEÇALHO - MOBILE  ============= ---*/
@@ -30,7 +33,7 @@ header {
 	width: 100%;
 	flex-direction: column;
 	align-items: center;
-	background-color: #f1f1f1;
+	background-color: #303030;
 	padding-top: 1px;
 	box-shadow:  0px 2px 5px rgba(0,0,0,0.5); 
 	position: fixed;
@@ -41,15 +44,20 @@ header {
 }
 
 header > div {
-	padding: 5px;
+	padding: 7px;
 }
 
 header div > a {
-	font-family: Pacifico, serif;
-	font-size: 25px;
-	font-weight: 700;
-	color: #2c3e50;
-	text-shadow: 1px 1px 1px #7d7d7d;
+	font-family: 'Exo 2', serif;
+	font-size: 35px;
+	font-weight: 800;
+	color: #f5f5f5;
+
+}
+
+header div > a span {
+	font-family: 'Exo 2', serif;
+	color: #18EB7B;
 }
 
 header nav {
@@ -78,15 +86,20 @@ nav ul.container-menu li {
 }
 
 nav ul.container-menu li a {
-	color: #2c3e50;
+	color: #f5f5f5;
 	display: block;
 	width: 95%;
-	padding: 12px 0;
+	padding: 12px 7px;
 	margin-left: 10px;
 	font-weight: bold;
+	font-family: 'Roboto', serif;
+	border-bottom: 1px solid #18EB7B;
+	text-transform: uppercase;
 }
 
-
+i.fa-home {
+	display: none;
+}
 
 /* --- ============  BOTAO DE PESQUISA - MOBILE  ============= ---*/
 
@@ -94,10 +107,10 @@ div.container-busca {
 	position: absolute;
 	top: 55px;
 	left: 0px;
-	width: 200px;
+	width: 100%;
 	height: auto;
-	background-color: #f1f1f1;
-	padding: 10px 5px 10px 15px;
+	background-color: #303030;
+	padding: 10px 5px 10px 25px;
 	border-radius: 0px 0px 3px;
 	margin-left: -100%;
 	transition: linear 0.5s;
@@ -105,13 +118,21 @@ div.container-busca {
 }
 
 div.container-busca input {
-	width: 170px;
+	width: 90%;
 	height: 40px;
+	margin: 0 auto;
 	padding-left: 5px;
-	border: 1px solid #9f9f9f;
-	border-radius: 3px;
-	color: #5d5d5d;
+	text-align: center;
+	border:none;
+	color: #18EB7B;
+	background-color: #373636;
 }
+div.container-busca input:focus {
+	
+	outline: none;
+	border: 1px solid #18EB7B;	
+}
+
 
 #btn-busca {
 	display: none;
@@ -121,7 +142,7 @@ i.icon-busca {
 	position: absolute;
 	top: 15px;
 	left: 16px;
-	color: #2c3e50;
+	color: #18EB7B;
 	font-size: 27px;
 	height: 100%;
 }
@@ -140,7 +161,7 @@ span.icon-menu {
 	position: absolute;
 	top: 0px;
 	right: 12px;
-	color: #2c3e50;
+	color: #18EB7B;
 	font-size: 27px;
 	height: 100%;
 	padding-top: 9px;
@@ -252,10 +273,10 @@ img.img-slide {
 	color: #4d4d4d;
 	display: block;
 	text-align: center;
-	width: 65%;
+	width: 250px;
 	padding: 10px;
 	margin-bottom: 15px;
-	border-bottom: #9d9d9d solid .5px;
+	border-bottom: #15E275 solid .5px;
 	
 }
 
@@ -263,7 +284,6 @@ img.img-slide {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 100%;
 	height: auto;
 	margin: 0 auto;
 	margin-top: 10px;
@@ -279,6 +299,7 @@ img.img-slide {
 	height: auto;
 	margin-bottom: 20px;
 	box-shadow:  0px 1px 3px rgba(0,0,0,0.5);
+	background-color: #F9F9F9;
 }
 
 .itens-artigos img {
@@ -297,8 +318,9 @@ img.img-slide {
 
 .itens-artigos a {
 	display: block;
-	font-size: 17px;
-	color: #5d5d5d;
+	font-weight: 600;
+	font-size: 15px;
+	color: #7d7d7d;
 	width: 100%;
 	height: 80%;
 }
@@ -308,6 +330,7 @@ img.img-slide {
 	width:100%;
 	height: auto;
 	font-size: 10px;
+	font-weight: bold;
 	color: #5d5d5d;
 }
 
@@ -368,12 +391,6 @@ img.img-slide {
 	height: auto;
 }
 
-/*.itens-videos a {
-	font-size: 17px;
-	padding: 5px 0px;
-	text-align: center;
-	color: #5d5d5d;
-}*/
 
 /* --- ============  RODAPEH - MOBILE  ============= ---*/
 
@@ -384,14 +401,14 @@ footer {
 	justify-content: center;
 	width: 100%;
 	height: 100px;
-	background-color: #2c3e50;
+	background-color: #303030;
 	color: #f1f1f1;
 	text-align: center;
 	font-size: 14px;
 }
 
 footer a {
-	color: #9d9d9d;
+	color: #18EB7B;
 }
 /*================== LINHAS DE PESQUISA - INICIO ==================*/
 
@@ -438,6 +455,7 @@ footer a {
 	height: auto;
 	margin-bottom: 50px;
 	padding: 0px 5px;
+	box-shadow:  0px 1px 3px rgba(0,0,0,0.5);
 }
 
 .container-integrantes div img {
@@ -452,9 +470,11 @@ footer a {
 .container-integrantes div p {
 	display: flex;
 	flex-direction: column;
-	padding-left: 15px;
+	padding-left: 0px;
+	padding-bottom: 15px;
 	width: 100%;
 	height: auto;
+	
 }
 
 
@@ -531,8 +551,11 @@ footer a {
 
 	header > div {
 		margin-left: 0px;	
-}
+	}
 
+	header div > a {
+		font-size: 35px;
+	}
 	
 	i.icon-busca {
 		display: none;
@@ -558,18 +581,28 @@ footer a {
 	}
 
 	nav ul.container-menu li a {
-		color: #2c3e50;
-		padding: 0 5px;
-		padding-top: 15px;
+		padding: 0px 7px;
+		padding-bottom: 17px;
+		padding-top: 19px;
 		margin-left: 0px;
 		width: 100%;
-		height: 100%;
-		font-size: 15px;
-		transition: linear 0.5;
+		height: auto;
+		font-size: 13px;
+		font-family: 'Roboto', serif;
+		transition: all linear 0.4s;
+	}
+
+	i.fa-home {
+		display: inline;
+		padding-right: 9px;
+		color: #18EB7B;
 	}
 
 	nav ul.container-menu li a:hover {
-		border-bottom: 2px solid #2c3e50;
+		height: auto;
+		border-bottom: 1px solid #18EB7B;
+		padding-top: 19px;
+		padding-bottom: 5px;
 	}
 
 	span.icon-menu {
@@ -603,32 +636,35 @@ footer a {
 	}
 	
 	#public h2 {
-		width: 25%;
+		width: 250px;
 	}
 
 	.container-artigos {
 		flex-direction: row;
-		justify-content: space-around;
+		justify-content: space-between;
 		flex-wrap: wrap;
-		max-width: 900px;
+		max-width: 840px;
 		height: auto;	
 		margin: 5px auto;
-		padding: 45px 0px;
+		padding: 45px 15px;
+	}
+
+	.itens-artigos a {
+		padding: 10px 0;
+		color: #5d5d5d;
 	}
 
 	.itens-artigos a:hover {
 		transition: color ease 0.5s;
-		color: #1D5F8A;
-	}
-	.itens-artigos a {
-		padding: 5px 0;
+		color: #15E275;
 	}
 	
 	.itens-artigos {
 		flex-direction: column;
 		width: 251px;
 		min-height: 281px;
-		margin-left: 15px;
+		margin-left: 10px;
+		background-color: #fff;
 	}
 	
 	.itens-artigos img {
@@ -642,7 +678,7 @@ footer a {
 		width:100%;
 		height: auto;
 		font-size: 10px;
-		color: #5d5d5d;
+
 	}
 
 	.categoria {
@@ -665,18 +701,22 @@ footer a {
 
 
 	.container-videos {
-		max-width: 300px;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		max-width: 840px;
 		height: auto;
-		padding: 0px 0px;
-		margin: 0px;
+		margin: 5px auto;
+		padding: 45px 15px;
 	}
 
 	.itens-videos {
 		display: flex;
 		flex-direction: column;
-		max-width: 300px;
+		width: 251px;
 		height: auto;
 		margin: 0 0;
+		margin-left: 10px;
 		margin-bottom: 20px;
 	
 	}

@@ -18,6 +18,9 @@ body {
 	color: #4d4d4d;
 	width: 100%;
 	background-color: #F5F5F5;
+	overflow-wrap: break-word;
+    word-break: break-word;
+    word-wrap: break-word;
 }
 
 h1, h2, h3 {
@@ -53,6 +56,17 @@ header div > a {
 	font-weight: 800;
 	color: #f5f5f5;
 
+}
+
+header div > a:before {
+	content: "< ";
+	color: #18EB7B;
+	font-size: 36px;
+}
+header div > a:after {
+	content: "/>";
+	color: #18EB7B;
+	font-size: 36px;
 }
 
 header div > a span {
@@ -276,7 +290,7 @@ img.img-slide {
 	width: 250px;
 	padding: 10px;
 	margin-bottom: 15px;
-	border-bottom: #15E275 solid .5px;
+	border-bottom: #9d9d9d solid .5px;
 	
 }
 
@@ -323,6 +337,7 @@ img.img-slide {
 	color: #7d7d7d;
 	width: 100%;
 	height: 80%;
+	padding-top: 7px;
 }
 
 .marcador-artigos {
@@ -442,9 +457,9 @@ footer a {
 .container-integrantes h1 {
 	display: block;
 	width: 95%;
-	text-align: left;
+	text-align: center;
 	padding: 10px 5px;
-	margin-bottom: 60px;
+	margin-bottom: 80px;
 	border-bottom: 1px solid #D3D3D3;
 }
 
@@ -454,27 +469,31 @@ footer a {
 	width: 95%;
 	height: auto;
 	margin-bottom: 50px;
-	padding: 0px 5px;
-	box-shadow:  0px 1px 3px rgba(0,0,0,0.5);
+	padding: 0px 0px;
+	
+	
 }
 
 .container-integrantes div img {
 	display: inline-block;
+	/*align-self: center;*/
 	width: 70px;
 	height: 70px;
 	max-width: 120px;
 	max-height: 120px;
+	margin-left: 7px;
+	margin-right: 10px;
 	border-radius: 50%;
 }
 
 .container-integrantes div p {
 	display: flex;
 	flex-direction: column;
-	padding-left: 0px;
 	padding-bottom: 15px;
 	width: 100%;
 	height: auto;
-	
+	border-radius: 0px 0px 20px 0px;
+	box-shadow:  1px 1px 3px rgba(0,0,0,0.6);
 }
 
 
@@ -487,7 +506,7 @@ footer a {
 	margin-bottom: 25px;
 	font-weight: bold;
 	color: #fff;
-	border-radius: 2px;
+	padding: 7px 5px;
 }
 
 .container-integrantes .titulo {
@@ -495,12 +514,15 @@ footer a {
 	width: 100%;
 	font-weight: 600;
 	font-size: 14px;
-	margin-left: 5px;
+	padding-left: 20px;
+	color: #22BB6B;
+	font-family: Palatino;
 }
 
 .container-integrantes .titulo span {
-	color: #37ABE7;
+	color: #707070;
 	font-weight: 600;
+	margin-left: 10px;
 	font-family: "Roboto";
 }
 
@@ -544,7 +566,7 @@ footer a {
 	header nav {
 		display: flex;
 		justify-content: flex-end;
-		max-width: 500px;
+		max-width: 600px;
 		height: 55px;
 		margin-right: 0px;
 	}
@@ -592,17 +614,24 @@ footer a {
 		transition: all linear 0.4s;
 	}
 
-	i.fa-home {
+	i.fa-home,
+	i.fa-users,
+	i.fa-address-book,
+	i.fa-book,
+	i.fa-graduation-cap {
 		display: inline;
 		padding-right: 9px;
 		color: #18EB7B;
 	}
 
+	
+
+
 	nav ul.container-menu li a:hover {
 		height: auto;
 		border-bottom: 1px solid #18EB7B;
 		padding-top: 19px;
-		padding-bottom: 5px;
+		padding-bottom: 7px;
 	}
 
 	span.icon-menu {
@@ -731,6 +760,14 @@ footer a {
 			margin-bottom: 90px;
 		}
 
+		.container-integrantes div p {
+			display: flex;
+			flex-direction: column;
+			padding-bottom: 15px;			
+			border-radius: 0px 0px 7px 7px;
+			
+		}
+
 	.container-integrantes .linhap {
 			font-size: 15px;
 			margin-bottom: 35px;
@@ -738,22 +775,21 @@ footer a {
 		}
 
 	.container-integrantes .titulo {
-			font-size: 16px;
+			font-size: 18px;
 			margin-left: 15px;
 			
 		}
 
 	.container-integrantes .titulo span {
-		font-size: 16px;
-		margin-left: 10px;
+		font-size: 15px;
 		font-weight: 600;
 	}
 
 	.container-integrantes div img {
 		display: block;
-		width: 100px;
-		height: 100px;
-		margin-bottom: 30px;
+		width: 200px;
+		height: 200px;
+		margin-bottom: 50px;
 	}
 
 }

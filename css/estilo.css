@@ -18,9 +18,12 @@ body {
 	color: #4d4d4d;
 	width: 100%;
 	background-color: #F5F5F5;
+    
+/*
 	overflow-wrap: break-word;
     word-break: break-word;
     word-wrap: break-word;
+*/
 }
 
 h1, h2, h3 {
@@ -37,7 +40,7 @@ header {
 	flex-direction: column;
 	align-items: center;
 	background-color: #303030;
-	padding-top: 1px;
+	
 	box-shadow:  0px 2px 5px rgba(0,0,0,0.5); 
 	position: fixed;
 	top: 0;
@@ -47,11 +50,12 @@ header {
 }
 
 header > div {
-	padding: 7px;
+	padding-top: 2px;
+    margin-bottom: 9px;
 }
 
 header div > a {
-	font-family: 'Exo 2', serif;
+	font-family: 'Exo 2', monospace;
 	font-size: 35px;
 	font-weight: 800;
 	color: #f5f5f5;
@@ -62,6 +66,7 @@ header div > a:before {
 	content: "< ";
 	color: #18EB7B;
 	font-size: 36px;
+
 }
 header div > a:after {
 	content: "/>";
@@ -70,8 +75,9 @@ header div > a:after {
 }
 
 header div > a span {
-	font-family: 'Exo 2', serif;
+	font-family: 'Exo 2', monospace;
 	color: #18EB7B;
+
 }
 
 header nav {
@@ -111,8 +117,14 @@ nav ul.container-menu li a {
 	text-transform: uppercase;
 }
 
-i.fa-home {
-	display: none;
+i.fa-home,
+i.fa-users,
+i.fa-address-book,
+i.fa-book,
+i.fa-graduation-cap {
+    display: inline;
+    padding-right: 9px;
+    color: #18EB7B;
 }
 
 /* --- ============  BOTAO DE PESQUISA - MOBILE  ============= ---*/
@@ -159,6 +171,7 @@ i.icon-busca {
 	color: #18EB7B;
 	font-size: 27px;
 	height: 100%;
+
 }
 
 #btn-busca:checked ~ .container-busca{
@@ -463,37 +476,50 @@ footer a {
 	border-bottom: 1px solid #D3D3D3;
 }
 
-.container-integrantes div {
+.container-integrantes > div {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	width: 95%;
 	height: auto;
 	margin-bottom: 50px;
 	padding: 0px 0px;
-	
+	align-items: center;
 	
 }
 
-.container-integrantes div img {
+.container-integrantes div .img_perfil {
 	display: inline-block;
 	/*align-self: center;*/
-	width: 70px;
-	height: 70px;
-	max-width: 120px;
-	max-height: 120px;
-	margin-left: 7px;
-	margin-right: 10px;
+	width: 100px;
+	height: 100px;
 	border-radius: 50%;
+	z-index: 2;
+    border: 7px solid #F5F5F5;
+    background-size: cover;
+    margin-bottom: -45px;
+}
+
+.img_perfil_1 {
+	background-image: url(../img/perfil-curriculum.png);
+}
+
+.img_perfil_2 {
+	background-image: url(../img/laptop_menor.jpg);
+}
+
+.img_perfil_3 {
+	background-image: url(../img/perfil-curriculum.png);
 }
 
 .container-integrantes div p {
 	display: flex;
-	flex-direction: column;
-	padding-bottom: 15px;
+	flex-direction: column-reverse;
+	min-height: 250px;
+	padding-top: 55px;
 	width: 100%;
 	height: auto;
-	border-radius: 0px 0px 20px 0px;
-	box-shadow:  1px 1px 3px rgba(0,0,0,0.6);
+	border-radius: 5px 5px 5px 5px;
+	box-shadow:  1px 1px 3px rgba(0,0,0,0.6); 
 }
 
 
@@ -501,25 +527,26 @@ footer a {
 	display: block;
 	width: 100%;
 	height: auto;
+	margin-top: 25px;
 	font-size: 12px;
 	text-align: center;
-	margin-bottom: 25px;
 	font-weight: bold;
 	color: #fff;
 	padding: 7px 5px;
+	border-radius: 0px 0px 5px 5px;
 }
 
 .container-integrantes .titulo {
 	display: block;
-	width: 100%;
 	font-weight: 600;
 	font-size: 14px;
-	padding-left: 20px;
 	color: #22BB6B;
 	font-family: Palatino;
+	padding-left: 20px;
 }
 
 .container-integrantes .titulo span {
+	display: inline-block;
 	color: #707070;
 	font-weight: 600;
 	margin-left: 10px;
@@ -550,11 +577,8 @@ footer a {
 	
 
 }
-
-
-@media screen and (min-width: 700px ) {
-
-/* --- ============  CABEÇALHO - DESKTOP  ============= ---*/
+@media screen and (min-width: 860px) {
+    /* --- ============  CABEÇALHO - DESKTOP  ============= ---*/
 	header {
 		display: flex;
 		flex-direction: row;
@@ -577,6 +601,7 @@ footer a {
 
 	header div > a {
 		font-size: 35px;
+
 	}
 	
 	i.icon-busca {
@@ -614,18 +639,7 @@ footer a {
 		transition: all linear 0.4s;
 	}
 
-	i.fa-home,
-	i.fa-users,
-	i.fa-address-book,
-	i.fa-book,
-	i.fa-graduation-cap {
-		display: inline;
-		padding-right: 9px;
-		color: #18EB7B;
-	}
-
 	
-
 
 	nav ul.container-menu li a:hover {
 		height: auto;
@@ -637,7 +651,11 @@ footer a {
 	span.icon-menu {
 			display: none;
 		}
-	
+}
+
+@media screen and (min-width: 700px ) {
+
+
 /* --- ============  SLIDE SHOW - DESKTOP  ============= ---*/
 
 	#container-slide {
@@ -672,7 +690,7 @@ footer a {
 		flex-direction: row;
 		justify-content: space-between;
 		flex-wrap: wrap;
-		max-width: 840px;
+		max-width: 900px;
 		height: auto;	
 		margin: 5px auto;
 		padding: 45px 15px;
@@ -752,26 +770,31 @@ footer a {
 	
 /*========== INTEGRANTES - DESKTOP - INICIO ================*/
 
-	.container-integrantes div {
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			width: 75%;
-			margin-bottom: 90px;
-		}
+	.container-integrantes > div {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 75%;
+        margin-bottom: 90px;
+        border-radius: 7px;
+        padding-top: 30px;
+        box-shadow:  1px 1px 3px rgba(0,0,0,0.6);
+    }
 
-		.container-integrantes div p {
-			display: flex;
-			flex-direction: column;
-			padding-bottom: 15px;			
-			border-radius: 0px 0px 7px 7px;
-			
-		}
+    .container-integrantes div p {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 15px;			
+        border-radius: 0px 0px 7px 7px;
+        box-shadow: none;
+        background-color: #404040;
+    }
 
 	.container-integrantes .linhap {
 			font-size: 15px;
 			margin-bottom: 35px;
 			border-radius: 0;
+
 		}
 
 	.container-integrantes .titulo {
@@ -783,13 +806,16 @@ footer a {
 	.container-integrantes .titulo span {
 		font-size: 15px;
 		font-weight: 600;
+        color: #f1f1f1;
 	}
 
 	.container-integrantes div img {
 		display: block;
 		width: 200px;
 		height: 200px;
-		margin-bottom: 50px;
+		margin-bottom: 30px;
+		
+
 	}
 
 }
